@@ -36,8 +36,9 @@ metabolite %>% group_by(Label, "Alzheimer") %>% tally()
 # b
 colSums(is.na(metabolite))
 # c
-df2 = metabolite[is.na(metabolite$"Dopamine")==T,]
+df2 = metabolite[is.na(metabolite$"Dopamine")==F,]
 head(df2)
 # d
 df2$"c4.OH.Pro"[is.na(df2$"c4.OH.Pro")]<-median(df2$"c4.OH.Pro", na.rm=T)
 head(df2)
+
